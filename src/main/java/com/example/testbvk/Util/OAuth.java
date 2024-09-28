@@ -19,6 +19,7 @@ public class OAuth{
                     authorizeRequests.requestMatchers("/testBVK/user/registerUser").permitAll();
                     authorizeRequests.requestMatchers("/testBVK/user/login").permitAll();
                     authorizeRequests.requestMatchers("/testBVK/user/oauth2/redirect").permitAll();
+                    authorizeRequests.requestMatchers("/testBVK/member/create").permitAll();
                     authorizeRequests.anyRequest().authenticated();
                 })
                 .oauth2Login()

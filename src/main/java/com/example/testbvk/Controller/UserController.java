@@ -4,6 +4,7 @@ package com.example.testbvk.Controller;
 import com.example.testbvk.DTO.reqbody.LoginUserReqBody;
 import com.example.testbvk.DTO.reqbody.RegisterUserReqBody;
 import com.example.testbvk.Service.UserInterface;
+import com.nimbusds.oauth2.sdk.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
@@ -36,6 +37,10 @@ public class UserController {
             return ResponseEntity.ok().body(e.getMessage());
         }
     }
+
+//    public ResponseEntity<?> UploadAvatar() {
+//
+//    }
 
     @PostMapping("user/registerUser")
     public ResponseEntity<?> register(@Validated @RequestBody RegisterUserReqBody r) {

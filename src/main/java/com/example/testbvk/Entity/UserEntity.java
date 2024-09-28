@@ -25,6 +25,4 @@ public class UserEntity {
 
     @Column(name="password")
     String password;
-
-
 }
